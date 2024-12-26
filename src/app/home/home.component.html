@@ -1,0 +1,93 @@
+<div >
+  
+    <div [style]=boxStyle>
+    <div class="mainbackimg scrollhide" >
+      
+      
+        <img alt="back photo" [src]=backphoto class="maingif" >
+
+
+        <div class="selecteschool">
+
+          <img alt="scholl" [src]=schoolback class="maingif" [style.display]="schooldis">
+        
+          <div class="schMobile">
+            <img alt="mobile" [src]=schoolss class="projectbackimg" >
+          </div>
+          
+          <div class="schptext" >
+            <h4 class="textcolor">Simplifying Education Management to Empower Success for Schools, Students, and Teachers.</h4>
+          </div>
+
+
+          <div class="schh1text" style=" width: 35%;height: 25%;bottom:5%; position:  absolute;right: 15%;">
+            <h1 class="textcolor">SCHOOL WEB WITH ERP</h1>
+          </div>
+
+          <div class="schwebtext">
+            <h4 class="textcolor">Web Development </h4>
+          </div>
+        </div>
+
+        
+        <div class="selecterent">
+
+          <img alt="rent" [src]=rentback class="maingif" [style.display]="rentdis">
+
+          <div class="rentdiplay" style=" width: 25%;height: 63%;bottom:5%; position:  absolute;right: 10%;">
+            <img alt="mobile" [src]=mobiless class="projectbackimg" >
+          </div>
+          
+          <div class="renth1text" >
+            <h1 class="textcolor">Mrent App</h1>
+          </div>
+
+          <div class="rentptext" >
+            <h4 class="textcolor">
+              Simplifying Rental Management to Empower Property Owners with Ease and Efficiency.            
+            </h4>
+          </div>
+
+          <div class="rentapptext">
+            <h4 class="textcolor">Mobile App Development </h4>
+          </div>
+
+        </div>
+       
+    </div>
+    <div class="otherinfo" >
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+      
+    </div>
+    </div>
+
+
+
+    <div class="title">AdnyaTech</div>
+    <a href="#" (click)="menubutton($event)" class="menutext glass" [style.display]=menuhide>Menu</a>
+    <a href="#" (click)="closebutton($event)" class="menutext glass closecolour" [style.display]=closehide>close</a>
+
+    
+    <div class="menu-container">
+        <div class="menu">
+          <a href="#" (click)="schoolbutton($event)" class="school glass">school web</a>
+          <a href="#about" class="mrent glass">Mrent</a>
+          
+        </div>
+    </div>
+
+    
+    <!-- <app-schoolproject [style]=boxStyle class="schoolpage" [style.display]= schdisplay></app-schoolproject> -->
+
+    <app-schoolpage [style]=boxStyle class="schoolpage" [style.display]= schdisplay></app-schoolpage>
+   
+</div>
+
+
+
+
