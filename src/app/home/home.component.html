@@ -59,9 +59,21 @@
 
     <!-- wellcome -->
     <div class="otherinfo" style="border: 2px solid red;">
-      <mat-grid-list cols="2:1" rowHeight="100%">
-        <mat-grid-tile style="border: 2px solid red;">1</mat-grid-tile>
-        <mat-grid-tile style="border: 2px solid red;">2</mat-grid-tile>
+      <mat-grid-list cols="2" rowHeight="100%">
+        <mat-grid-tile  style="border: 2px solid red;">
+          <div style="width: 100%;height: 100%;">
+            <h1 class="welh1">WELCOME!</h1>
+
+            <p class="welp">
+              I’m Vinit Arun Patil, a dedicated Full Stack Developer with a focus on creating powerful and reliable applications. From backend APIs to sleek frontends, I’m passionate about turning ideas into functional, user-friendly solutions.
+              Take a look around and feel free to reach out!
+            </p>
+
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile style="border: 2px solid red;">
+          <img alt="vinitpic" [src]=vinitpic class="welimg">
+        </mat-grid-tile>
         
       </mat-grid-list>
       

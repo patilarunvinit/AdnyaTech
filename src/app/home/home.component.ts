@@ -135,4 +135,5 @@ export class HomeComponent {
   rentback:string="assets/img/rentback.JPG"
   mobiless:string="assets/img/ss.png"
   schoolss:string="assets/img/Swebss.png"
+  vinitpic:string="assets/img/vinit_photo.jpg"
 }
