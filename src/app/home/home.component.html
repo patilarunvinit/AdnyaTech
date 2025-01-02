@@ -58,31 +58,84 @@
 
 
     <!-- wellcome -->
-    <div class="otherinfo" style="border: 2px solid red;">
+    <div class="otherinfo scrollinfo" >
       <mat-grid-list cols="2" rowHeight="100%">
-        <mat-grid-tile  style="border: 2px solid red;">
-          <div style="width: 100%;height: 100%;">
+        <mat-grid-tile >
+          <div style="height: 100%;margin-top:50%;" >
             <h1 class="welh1">WELCOME!</h1>
 
             <p class="welp">
-              I’m Vinit Arun Patil, a dedicated Full Stack Developer with a focus on creating powerful and reliable applications. From backend APIs to sleek frontends, I’m passionate about turning ideas into functional, user-friendly solutions.
-              Take a look around and feel free to reach out!
+              I’m Vinit Arun Patil, a dedicated Full Stack Developer focused on building powerful and reliable applications.
+              From crafting backend APIs with Django to designing sleek frontends using Angular and Ionic,
+              I’m passionate about turning ideas into functional, user-friendly solutions.
+              <br><br>
+              With expertise in Python, MySQL, JWT authentication, and performance optimization,
+              I create scalable web and mobile applications that are secure and efficient.
+              <br><br>
+              Feel free to take a look around and reach out if you’d like to collaborate or discuss potential opportunities!
             </p>
 
           </div>
         </mat-grid-tile>
-        <mat-grid-tile style="border: 2px solid red;">
+        <mat-grid-tile>
           <img alt="vinitpic" [src]=vinitpic class="welimg">
         </mat-grid-tile>
         
-      </mat-grid-list>
-      
+      </mat-grid-list>      
+    </div>
+
+
+    <div class="aboutme" >
+      <mat-grid-list cols="3" rowHeight="100%">
+        <mat-grid-tile colspan="1" >
+          <img alt="sideface" [src]=sideimg class="aboutimg">
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2" >
+          <div style="height: 100%;margin-top:25%;" >
+            <h1 class="welh1">ABOUT ME</h1>
+            <h2 style="color: white;">
+              Name :- VINIT ARUN PATIL
+            </h2>
+            <h2 style="color: white;">
+              Education :- BE Electronics and Telecommunication
+            </h2>
+            <h2 style="color: white;">
+              Location :- Thane, Maharastra 421302
+            </h2>
+            <h2 style="color: white;">
+              Email :- <a class="emailA" href="mailto:vinitpatil1001@gmail.com">vinitpatil1001&#64;gmail.com</a>
+              <!-- Email :- vinitpatil1001&#64;gmail.com -->
+            </h2>
+            <h2 style="color: white;">
+              Phone No :- +91 7900079060
+            </h2>
+            <div class="logodiv">
+
+              <a href="mailto:vinitpatil1001@gmail.com">
+                <img alt="emaillogo" [src]=email class="email">
+              </a>
+
+              <a href="https://github.com/patilarunvinit/" target="_blank">
+                <img alt="githublogo" [src]=github class="linkedin ">
+              </a>
+
+              <a href="https://www.linkedin.com/in/vinit-patil-2661081a9/" target="_blank">
+                <img alt="linkedinlogo" [src]=linkedin class="linkedin" >
+              </a>
+
+              
+            </div>
+          </div>
+          
+        </mat-grid-tile>
+        
+      </mat-grid-list> 
     </div>
   </div>
 
 
 
-    <div class="title">.AdnyaTech.</div>
+    <div class="title">AdnyaTech</div>
     <a href="#" (click)="menubutton($event)" class="menutext glass" [style.display]=menuhide>Menu</a>
     <a href="#" (click)="closebutton($event)" class="menutext glass closecolour" [style.display]=closehide>close</a>
 

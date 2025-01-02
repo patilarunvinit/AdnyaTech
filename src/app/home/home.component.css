@@ -12,6 +12,9 @@
 .scrollhide{
    display: block;
 }
+.scrollinfo{
+  display: block;
+}
 .otherinfo{
   width: 100%;
   height: 100vh;
@@ -24,22 +27,66 @@
 .welimg{
   width: 70%;
   height: 80%;
+  object-fit: cover;
+  clip-path: inset(100% 0 0 0); /* Initially hide the whole image */
+  animation: reveal 3s ease-in-out forwards;
 }
+
+@keyframes reveal {
+  0% {
+      clip-path: inset(100% 0 0 0); /* Start with the image hidden from the top */
+  }
+  100% {
+      clip-path: inset(0 0 0 0); /* Reveal the whole image */
+  }
+}
+
 .welh1{
   color: white;
   font-size: 50px;
-  border: 2px solid white;
   text-align: center;
   
 }
 .welp{
   color: white;
-  border: 2px solid white;
   text-align: center;
-  width: 80%;
-  left: 10%;
+  width: 90%;
+  left: 5%;
   position: absolute;
 
+}
+
+
+
+.aboutme{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.aboutimg{
+  width: 100%;
+  height: 100%;
+}
+.emailA{
+  color: white;
+  /* text-decoration: none; */
+}
+.logodiv{
+  width: 100%;
+  height: 7%;
+  margin-top: 15%;
+  /* border: 2px solid red; */
+}
+.email{
+  height: 100%;
+  float: right;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.linkedin{
+  height: 100%;
+  float: right;
+  margin-left: 3%;
 }
 
 

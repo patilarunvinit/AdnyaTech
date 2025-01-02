@@ -75,19 +75,61 @@ export class HomeComponent {
 
 
 
-    const scrollDiv = document.querySelector('.scrollhide')as HTMLElement;
+    // const scrollDiv = document.querySelector('.scrollhide')as HTMLElement;
 
-    if (scrollDiv) {
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const maxScroll = 500;
-        const newOpacity = Math.max(1 - scrollTop / maxScroll, 0);
+    // if (scrollDiv) {
+    //   window.addEventListener('scroll', () => {
+    //     const scrollTop = window.scrollY;
+    //     const maxScroll = 500;
+    //     const newOpacity = Math.max(1 - scrollTop / maxScroll, 0);
     
-        // Now TypeScript knows `scrollDiv` has the `style` property
-        scrollDiv.style.opacity = newOpacity.toString();
-      });
+    //     // Now TypeScript knows `scrollDiv` has the `style` property
+    //     scrollDiv.style.opacity = newOpacity.toString();
+    //   });
 
+    // }
+
+
+const scrollDiv1 = document.querySelector('.scrollhide') as HTMLElement;
+const scrollDiv2 = document.querySelector('.scrollinfo') as HTMLElement;
+
+const maxScroll = 500; // Max scroll for opacity change
+const scrollThreshold = 70; // Scroll threshold to start decreasing opacity
+
+// Handle scroll effect for both divs
+if (scrollDiv1 && scrollDiv2) {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY; // Get the scroll position
+
+    // If scroll is below the threshold, keep both divs at full opacity
+    if (scrollTop < scrollThreshold) {
+      scrollDiv1.style.opacity = '1';
+      scrollDiv2.style.opacity = '1';
+      return; // Don't process further
     }
+
+    // Apply easing effect: slower at first, faster after halfway
+    const scrollProgress = (scrollTop - scrollThreshold) / maxScroll; // Normalize scroll position
+    const easeOutProgress = Math.pow(scrollProgress, 2); // Quadratic easing for smooth speed-up
+
+    // Calculate opacity for scrollDiv1 (first div) - starts fading after scroll exceeds threshold
+    const opacity1 = Math.max(1 - easeOutProgress, 0);
+    scrollDiv1.style.opacity = opacity1.toString();
+
+    // Calculate opacity for scrollDiv2 (second div) - starts fading after first div has finished fading
+    const easeOutProgress2 = Math.pow((scrollTop - maxScroll - scrollThreshold) / maxScroll, 2);
+    const opacity2 = Math.max(1 - easeOutProgress2, 0);
+
+    // Only allow opacity change for scrollDiv2 after the first div has fully faded (scrollTop >= maxScroll)
+    if (scrollTop >= maxScroll + scrollThreshold) {
+      scrollDiv2.style.opacity = opacity2.toString();
+    } else {
+      scrollDiv2.style.opacity = '1'; // Keep scrollDiv2 fully opaque until the first div has faded
+    }
+  });
+}
+
+
   }
   
 
@@ -136,4 +178,9 @@ export class HomeComponent {
   mobiless:string="assets/img/ss.png"
   schoolss:string="assets/img/Swebss.png"
   vinitpic:string="assets/img/vinit_photo.jpg"
+  sideimg:string="assets/img/vinitside.png"
+  linkedin:string="assets/img/linkedin.png"
+  github:string="assets/img/github.png"
+  email:string="assets/img/email.png"
+
 }
