@@ -85,7 +85,7 @@
     </div>
 
 
-    <div class="aboutme" >
+    <div class="aboutme scrollabout" >
       <mat-grid-list cols="3" rowHeight="100%">
         <mat-grid-tile colspan="1" >
           <img alt="sideface" [src]=sideimg class="aboutimg">
@@ -130,6 +130,59 @@
         </mat-grid-tile>
         
       </mat-grid-list> 
+    </div>
+
+    
+
+    <div class="whyme" >
+      <mat-grid-list cols="4" rowHeight="fit" style="height:100%">
+        <mat-grid-tile colspan="2" >
+          <div style="height:100%; width: 100%;margin-top: 15%;">
+            <h1 style="color: white;float: left;width: 100%;margin-left: 3%;">
+              Why Choose Me
+            </h1>
+            <h1 style="color: white;text-align: center;font-size: 50px;">
+              My Extensive <br>
+              List Of Skills
+            </h1>
+          </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile colspan="2" >
+          <p style="color: white; width: 80%;font-family: 'Dancing Script', cursive, sans-serif;font-size: 20px;">
+            With a strong foundation in full stack Development, I am committed to bringing fresh ideas, creative solutions, and a high level of enthusiasm to every project. I focus on delivering results that align with your goals.
+
+          </p>
+        </mat-grid-tile>
+        
+        <mat-grid-tile colspan="4" >
+          <div class="scroll-container">
+            <button class="scroll-btn left-btn" (click)="scrollLeft()">←</button>
+            <div class="container" #scrollContainer>
+              <div class="box" style="margin-left: 5%;">
+                <img alt="python" [src]=python class="langlogo">
+              </div>
+              <div class="box">
+                <img alt="django" [src]=django class="langlogo">
+              </div>
+              <div class="box">
+                <img alt="angular" [src]=angular class="langlogo">
+              </div>
+              <div class="box">mysql</div>
+              <div class="box">ionic</div>
+              <div class="box">git</div>
+            </div>
+            <button class="scroll-btn right-btn" (click)="scrollRight()">→</button>
+          </div>
+        </mat-grid-tile>
+
+
+      </mat-grid-list>
+    </div>
+
+
+    <div style="width: 100%;height: 100%;">
+
     </div>
   </div>
 
