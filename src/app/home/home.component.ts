@@ -147,11 +147,11 @@ if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy) {
     }
 
     // For scrollWhy: starts fading when the third div has fully faded
-    const easeOutProgress4 = Math.pow((scrollTop - (maxScroll * 3) - scrollThreshold) / maxScroll, 2);
+    const easeOutProgress4 = Math.pow((scrollTop - (maxScroll * 3.2) - scrollThreshold) / maxScroll, 2);
     const opacity4 = Math.max(1 - easeOutProgress4, 0);
 
     // Only allow opacity change for scrollWhy after the third div has fully faded
-    if (scrollTop >= (maxScroll * 3) + scrollThreshold) {
+    if (scrollTop >= (maxScroll * 3.2) + scrollThreshold) {
       scrollWhy.style.opacity = opacity4.toString();
     } else {
       scrollWhy.style.opacity = '1'; // Keep scrollWhy fully opaque until the third div has faded
