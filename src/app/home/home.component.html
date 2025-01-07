@@ -262,19 +262,41 @@
     <!-- Form -->
     <div class="form">
       <mat-grid-list cols="4" rowHeight="fit" style="height:100%">
+        
         <mat-grid-tile colspan="2"  >
           
           <div style="height: 100%;margin-top: 15%;width: 100%;" >
             <h1 class="h1titleW">Get In Touch</h1>
-            <div class="workinfodiv">
-              
+            
+            <div class="formnfodiv">
+              <a href="tel:+917900079060" style="text-decoration: none;">
+                <img alt="calllogo" [src]=call class="emailF">
+                <p class="fimglink">+91 7900079060</p>
+              </a>
             </div>
-            <div class="workinfodiv"></div>
-            <div class="workinfodiv"></div>
+           
+            <div class="formnfodiv">
+              <a href="mailto:vinitpatil1001@gmail.com" style="text-decoration: none;">
+                <img alt="emaillogo" [src]=email class="emailF">
+                <p class="fimglink">vinitpatil1001&#64;gmail.com</p>
+              </a>
+            </div>
+            
+            <div class="formnfodiv">
+              <a [href]="location" target="_blank" style="text-decoration: none;">
+                <img alt="locationlogo" [src]=locationimg class="emailF">
+                <p class="fimglink">Kasheli, Thane 421302</p>
+              </a>
+            </div>
+
           </div>
         </mat-grid-tile>
-        <mat-grid-tile colspan="2" style="border: 2px solid red;" >
-          
+
+
+        <mat-grid-tile colspan="2" >
+          <div class="formMdiv">
+            <h1 style="color: white;text-align: center;">Message</h1>
+          </div>
         </mat-grid-tile>
       </mat-grid-list>
     </div>

@@ -179,6 +179,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  color: white;
   /* border: 2px solid red; */
 }
 .scrollwork{
@@ -194,16 +195,32 @@
   text-align: center;
 
 }
-.workinfodiv{
-  width: 70%;
-  height: 10%;
-  border-radius: 25px;
-  margin-bottom: 10%;
-  margin-left: 15%;
-  border: 2px solid red;
+.workimgdiv{
+  height: 90%;  
+  width: auto;  
+  aspect-ratio: 1; 
+  /* border: 2px solid red; */
+  border-radius: 50%;  
+  overflow: hidden;
 }
-
-
+.workimg{
+  width: 100%;
+  height: 100%;
+}
+.worktestdiv{
+  width: 100%;
+  height: 100%;
+}
+.worklisth3{
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+.worklistp{
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+}
 
 
 
@@ -228,6 +245,39 @@
   width: 100%;
   height: 70%;
 }
+.formnfodiv{
+  width: 70%;
+  height: 10%;
+  border-radius: 25px;
+  margin-bottom: 10%;
+  margin-left: 15%;
+  border: 2px solid #333;
+  background-color: #333;
+}
+.emailF{
+  height: 70%;
+  float: left;
+  margin-left: 10%;
+  top: 10%;
+  position: relative;
+  
+}
+.fimglink{
+  color: white;
+  margin-left: 30%;
+}
+.formMdiv{
+  width: 80%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  border-radius: 25px;
+  border: 2px solid white;
+}
+
+
+
+
 
 
 

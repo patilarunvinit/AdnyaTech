@@ -261,4 +261,8 @@ if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy && scrollWork) {
   Stratergy:string="assets/img/Stratergy.jpg"
   Devlepment:string="assets/img/Devlepment.avif"
 
+  call:string="assets/img/call.png"
+  locationimg:string="assets/img/location.png"
+  
+  location:any="https://www.google.com/maps/place/Kasheli+Thane/@19.2367874,73.009114,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7bd001fb759cb:0x1b1f18fbb9bfab97!8m2!3d19.2367874!4d73.009114!16s%2Fg%2F11wwt8dwyt?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D"
 }
