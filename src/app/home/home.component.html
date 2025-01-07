@@ -1,6 +1,8 @@
 <div >
   
     <div [style]=boxStyle>
+     
+    <!-- Animation --> 
     <div class="mainbackimg scrollhide" >
       
       
@@ -84,7 +86,7 @@
       </mat-grid-list>      
     </div>
 
-
+    <!-- About Me -->
     <div class="aboutme scrollabout" >
       <mat-grid-list cols="3" rowHeight="100%">
         <mat-grid-tile colspan="1" >
@@ -133,7 +135,7 @@
     </div>
 
     
-
+    <!-- Why Me -->
     <div class="whyme scrollwhy" >
       <mat-grid-list cols="4" rowHeight="fit" style="height:100%">
         <mat-grid-tile colspan="2" >
@@ -187,19 +189,106 @@
       </mat-grid-list>
     </div>
 
+    <!-- work -->
+    <div class="work scrollwork">
+      <mat-grid-list cols="4" rowHeight="fit" style="height:100%">
+        <mat-grid-tile colspan="4" rowspan="1">
+            <h1 class="h1titleW">
+              My Working Process
+            </h1>
+          
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4" rowspan="4">
+          
+          <mat-grid-list cols="4" rowHeight="fit" style="height:100%; width: 100%;">
+           
+           
+            <mat-grid-tile colspan="1" rowspan="1">
+              <div class="workimgdiv">
+                <img alt="research" [src]=research class="workimg" >
+              </div>
+            </mat-grid-tile>                  
+            <mat-grid-tile colspan="3" rowspan="1">
+              <div class="worktestdiv" >
+                <h3 class="worklisth3">Research</h3>
+              <p class="worklistp">
+                I begin with thorough research to understand your goals,
+                audience, and market trends, ensuring that every decision 
+                is informed and aligned with your vision.
+              </p>
+              </div>
+            </mat-grid-tile>
+            
 
-    <div style="width: 100%;height: 100%;">
+            
+            <mat-grid-tile colspan="3"  rowspan="1">
+              <div class="worktestdiv" >
+                <h3 class="worklisth3">Stratergy</h3>
+              <p class="worklistp">
+                My strategic approach combines creativity and data, creating 
+                tailored solutions that outline clear, actionable steps for 
+                success while keeping your objectives at the forefront.
+              </p>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1"  rowspan="1">
+              <div class="workimgdiv">
+                <img alt="Stratergy" [src]=Stratergy class="workimg" >
+              </div>
+            </mat-grid-tile>
+            
+            
 
+            <mat-grid-tile colspan="1"  rowspan="1">
+              <div class="workimgdiv">
+                <img alt="Devlepment" [src]=Devlepment class="workimg" >
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="3"  rowspan="1">
+              <div class="worktestdiv" >
+                <h3 class="worklisth3">Devlepment</h3>
+              <p class="worklistp">
+                During the development phase, I bring the strategy to life 
+                through meticulous execution, using cutting-edge technology and 
+                best practices to deliver high-quality, scalable results.
+              </p>
+              </div>
+            </mat-grid-tile>
+            </mat-grid-list>
+        </mat-grid-tile>
+      </mat-grid-list>
     </div>
+
+    <!-- Form -->
+    <div class="form">
+      <mat-grid-list cols="4" rowHeight="fit" style="height:100%">
+        <mat-grid-tile colspan="2"  >
+          
+          <div style="height: 100%;margin-top: 15%;width: 100%;" >
+            <h1 class="h1titleW">Get In Touch</h1>
+            <div class="workinfodiv">
+              
+            </div>
+            <div class="workinfodiv"></div>
+            <div class="workinfodiv"></div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2" style="border: 2px solid red;" >
+          
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
   </div>
 
 
-
+    <!-- title, menu, close menu -->
     <div class="title">AdnyaTech</div>
     <a href="#" (click)="menubutton($event)" class="menutext glass" [style.display]=menuhide>Menu</a>
     <a href="#" (click)="closebutton($event)" class="menutext glass closecolour" [style.display]=closehide>close</a>
 
-    
+
+    <!-- Select Project -->
     <div class="menu-container">
         <div class="menu">
           <a href="#" (click)="schoolbutton($event)" class="school glass">school web</a>
@@ -211,6 +300,7 @@
     
     <!-- <app-schoolproject [style]=boxStyle class="schoolpage" [style.display]= schdisplay></app-schoolproject> -->
 
+    <!-- one one Project dispays -->
     <app-schoolpage [style]=boxStyle class="schoolpage" [style.display]= schdisplay></app-schoolpage>
    
 </div>

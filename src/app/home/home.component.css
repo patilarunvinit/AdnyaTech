@@ -58,6 +58,9 @@
 
 
 
+
+
+
 .aboutme{
   width: 100%;
   height: 100vh;
@@ -169,6 +172,62 @@
 }
 
 
+
+
+
+.work{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /* border: 2px solid red; */
+}
+.scrollwork{
+  width: 100%;
+}
+.worktitle{
+  width: 100%;
+  height: 100%;
+}
+.h1titleW{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+
+}
+.workinfodiv{
+  width: 70%;
+  height: 10%;
+  border-radius: 25px;
+  margin-bottom: 10%;
+  margin-left: 15%;
+  border: 2px solid red;
+}
+
+
+
+
+
+
+.form{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.formtextdiv{
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.formh1{
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  /* height: 20%; */
+}
+.forminfodiv{
+  width: 100%;
+  height: 70%;
+}
 
 
 

@@ -98,12 +98,13 @@ export class HomeComponent {
 const scrollDiv2 = document.querySelector('.scrollinfo') as HTMLElement;
 const scrollAbout = document.querySelector('.scrollabout') as HTMLElement;
 const scrollWhy = document.querySelector('.scrollwhy') as HTMLElement; // Added scrollWhy
+const scrollWork = document.querySelector('.scrollwork') as HTMLElement; // Added scrollwork
 
 const maxScroll = 500; // Max scroll for opacity change
 const scrollThreshold = 70; // Scroll threshold to start decreasing opacity
 
-// Handle scroll effect for all four divs
-if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy) {
+// Handle scroll effect for all five divs
+if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy && scrollWork) {
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY; // Get the scroll position
 
@@ -113,6 +114,7 @@ if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy) {
       scrollDiv2.style.opacity = '1';
       scrollAbout.style.opacity = '1'; // Keep scrollAbout fully opaque
       scrollWhy.style.opacity = '1'; // Keep scrollWhy fully opaque
+      scrollWork.style.opacity = '1'; // Keep scrollWork fully opaque
       return; // Don't process further
     }
 
@@ -155,6 +157,17 @@ if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy) {
       scrollWhy.style.opacity = opacity4.toString();
     } else {
       scrollWhy.style.opacity = '1'; // Keep scrollWhy fully opaque until the third div has faded
+    }
+
+    // For scrollWork: starts fading when the fourth div has fully faded
+    const easeOutProgress5 = Math.pow((scrollTop - (maxScroll * 4.4) - scrollThreshold) / maxScroll, 2);
+    const opacity5 = Math.max(1 - easeOutProgress5, 0);
+
+    // Only allow opacity change for scrollWork after the fourth div has fully faded
+    if (scrollTop >= (maxScroll * 4.4) + scrollThreshold) {
+      scrollWork.style.opacity = opacity5.toString();
+    } else {
+      scrollWork.style.opacity = '1'; // Keep scrollWork fully opaque until the fourth div has faded
     }
   });
     }
@@ -243,5 +256,9 @@ if (scrollDiv1 && scrollDiv2 && scrollAbout && scrollWhy) {
   mysql:string="assets/img/mysql.jpg"
   ionic:string="assets/img/ionic.jpg"
   git:string="assets/img/git.jpg"
+
+  research:string="assets/img/research.jpg"
+  Stratergy:string="assets/img/Stratergy.jpg"
+  Devlepment:string="assets/img/Devlepment.avif"
 
 }
